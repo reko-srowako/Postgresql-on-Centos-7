@@ -10,6 +10,8 @@
 #
 #
 
+echo "BUFISA GLOBAL DATATECH (Documentation recruitment by Reko Srowako)"
+
 # Variable
 PGVERSION=11  				# Postgresql version e.g. 11, 12, 13 14 15
 LOGFILE=install.log 			# Log file name
