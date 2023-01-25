@@ -1,0 +1,186 @@
+Wed Jan 25 05:55:07 EST 2023 Creating log file install.log ...
+File already exist in the same directory of this script with name install.log.
+
+Wed Jan 25 05:55:07 EST 2023 Checking OS ...
+CentOS 7
+
+Wed Jan 25 05:55:07 EST 2023 Checking repository postgresql ...
+x86_64
+Installing repository ...
+Loaded plugins: fastestmirror
+Examining /var/tmp/yum-root-BniCYZ/pgdg-redhat-repo-latest.noarch.rpm: pgdg-redhat-repo-42.0-32.                                                      noarch
+Marking /var/tmp/yum-root-BniCYZ/pgdg-redhat-repo-latest.noarch.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package pgdg-redhat-repo.noarch 0:42.0-32 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch     Version    Repository                         Size
+================================================================================
+Installing:
+ pgdg-redhat-repo   noarch   42.0-32    /pgdg-redhat-repo-latest.noarch    13 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total size: 13 k
+Installed size: 13 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : pgdg-redhat-repo-42.0-32.noarch                              1/1
+  Verifying  : pgdg-redhat-repo-42.0-32.noarch                              1/1
+
+Installed:
+  pgdg-redhat-repo.noarch 0:42.0-32
+
+Complete!
+
+Wed Jan 25 05:55:07 EST 2023 Checking postgreSQL in system...
+Package postgresql11-server is not installed.
+Installing postgresql11-server ...
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.angkasa.id
+ * extras: centos.mirror.angkasa.id
+ * updates: centos.mirror.angkasa.id
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Resolving Dependencies
+--> Running transaction check
+---> Package postgresql11-server.x86_64 0:11.18-1PGDG.rhel7 will be installed
+--> Processing Dependency: postgresql11-libs(x86-64) = 11.18-1PGDG.rhel7 for package: postgresql                                                      11-server-11.18-1PGDG.rhel7.x86_64
+--> Processing Dependency: postgresql11(x86-64) = 11.18-1PGDG.rhel7 for package: postgresql11-se                                                      rver-11.18-1PGDG.rhel7.x86_64
+--> Processing Dependency: libpq.so.5()(64bit) for package: postgresql11-server-11.18-1PGDG.rhel                                                      7.x86_64
+--> Processing Dependency: libicuuc.so.50()(64bit) for package: postgresql11-server-11.18-1PGDG.                                                      rhel7.x86_64
+--> Processing Dependency: libicui18n.so.50()(64bit) for package: postgresql11-server-11.18-1PGD                                                      G.rhel7.x86_64
+--> Running transaction check
+---> Package libicu.x86_64 0:50.2-4.el7_7 will be installed
+---> Package postgresql11.x86_64 0:11.18-1PGDG.rhel7 will be installed
+---> Package postgresql11-libs.x86_64 0:11.18-1PGDG.rhel7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch        Version                 Repository   Size
+================================================================================
+Installing:
+ postgresql11-server      x86_64      11.18-1PGDG.rhel7       pgdg11      4.7 M
+Installing for dependencies:
+ libicu                   x86_64      50.2-4.el7_7            base        6.9 M
+ postgresql11             x86_64      11.18-1PGDG.rhel7       pgdg11      1.7 M
+ postgresql11-libs        x86_64      11.18-1PGDG.rhel7       pgdg11      369 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 14 M
+Installed size: 53 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/pgdg11/packages/postgresql11-libs-11.18-1PGDG.rhel7.x86_64.rpm:                                                       Header V4 DSA/SHA1 Signature, key ID 442df0f8: NOKEY
+Public key for postgresql11-libs-11.18-1PGDG.rhel7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              1.6 MB/s |  14 MB  00:08
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68c9 e2b9 1a37 d136 fe74 d176 1f16 d2e1 442d f0f8
+ Package    : pgdg-redhat-repo-42.0-32.noarch (@/pgdg-redhat-repo-latest.noarch)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : postgresql11-libs-11.18-1PGDG.rhel7.x86_64                   1/4
+  Installing : libicu-50.2-4.el7_7.x86_64                                   2/4
+  Installing : postgresql11-11.18-1PGDG.rhel7.x86_64                        3/4
+  Installing : postgresql11-server-11.18-1PGDG.rhel7.x86_64                 4/4
+  Verifying  : postgresql11-server-11.18-1PGDG.rhel7.x86_64                 1/4
+  Verifying  : postgresql11-11.18-1PGDG.rhel7.x86_64                        2/4
+  Verifying  : libicu-50.2-4.el7_7.x86_64                                   3/4
+  Verifying  : postgresql11-libs-11.18-1PGDG.rhel7.x86_64                   4/4
+
+Installed:
+  postgresql11-server.x86_64 0:11.18-1PGDG.rhel7
+
+Dependency Installed:
+  libicu.x86_64 0:50.2-4.el7_7
+  postgresql11.x86_64 0:11.18-1PGDG.rhel7
+  postgresql11-libs.x86_64 0:11.18-1PGDG.rhel7
+
+Complete!
+
+Wed Jan 25 05:55:07 EST 2023 Initialize database ...
+Initializing database ... OK
+
+
+Wed Jan 25 05:55:07 EST 2023 Enable postgresql service  on boot ...
+Created symlink from /etc/systemd/system/multi-user.target.wants/postgresql-11.service to /usr/l                                                      ib/systemd/system/postgresql-11.service.
+
+Wed Jan 25 05:55:07 EST 2023 Starting Postgresql-11 service ...
+
+=============================================================================
+
+Postgresql version installed :
+PostgreSQL 11.18 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)                                                      , 64-bit
+
+Postgresql directory to use for data storage :
+/var/lib/pgsql/11/data
+
+Postgresql main server configuration file (customarily called postgresql.conf) :
+/var/lib/pgsql/11/data/postgresql.conf
+
+Postgresql configuration file for host-based authentication (customarily called pg_hba.conf) :
+/var/lib/pgsql/11/data/pg_hba.conf
+
+Postgresql service command :
+systemctl status postgresql-11  # For showing status service
+systemctl start postgresql-11   # For start service
+systemctl stop postgresql-11            # For stop service
+systemctl restart postgresql-11         # For restart service
+
+=============================================================================
+
+Wed Jan 25 05:55:07 EST 2023 Script Done ...
