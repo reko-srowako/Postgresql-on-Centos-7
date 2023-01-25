@@ -1,21 +1,21 @@
 #!/bin/bash
 #
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# + This script must run on root or sudo permission                    +
-# + Supported CentOS 7 with architecture x86_64, ppc64le and aarch64   +
-# + Based on https://www.postgresql.org/download/linux/redhat/         +
-# + Tested in Linux Centos 7 x86_64                                    +
-# + Usage : sh pg-install.sh                                           +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# + This script must run on root or sudo permission                    						+
+# + Supported CentOS 7 with architecture x86_64, ppc64le and aarch64   						+
+# + Based on https://www.postgresql.org/download/linux/redhat/         						+
+# + Tested in Linux Centos 7 x86_64                                    						+
+# + Usage : curl -s https://raw.githubusercontent.com/reko-srowako/Postgresql-on-Centos-7/main/run.sh | bash	+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
 #
 
 # Variable
-PGVERSION=11  							# Postgresql version e.g. 11, 12, 13 14 15
-LOGFILE=pg-install.log 					# Log file name
+PGVERSION=11  				# Postgresql version e.g. 11, 12, 13 14 15
+LOGFILE=install.log 			# Log file name
 DATE=`date`                             # Variable to capture date now using command date 
-PGAPP=postgresql$PGVERSION-server		# Postgresql package name
-PGREPO=pgdg-redhat-repo 				# Postgresql repository package name
+PGAPP=postgresql$PGVERSION-server	# Postgresql package name
+PGREPO=pgdg-redhat-repo 		# Postgresql repository package name
 
 
 # Verify script must run as root
@@ -60,7 +60,8 @@ echo ""
 # Checking and Install Repository 
 echo "$DATE Checking repository postgresql ... " | tee /dev/fd/3
 
-OSARCH=`uname -m`         												# Check OS Architecture 
+# Check OS Architecture
+OSARCH=`uname -m` 
 
 if [[ $OSARCH == x86_64 ]]; then
 	DOWNARCH=x86_64
@@ -151,7 +152,7 @@ echo "" | tee /dev/fd/3
 echo "Postgresql service command :" | tee /dev/fd/3
 echo "systemctl status postgresql-$PGVERSION 	# For showing status service " | tee /dev/fd/3
 echo "systemctl start postgresql-$PGVERSION 	# For start service" | tee /dev/fd/3
-echo "systemctl stop postgresql-$PGVERSION 		# For stop service" | tee /dev/fd/3
+echo "systemctl stop postgresql-$PGVERSION 	# For stop service" | tee /dev/fd/3
 echo "systemctl restart postgresql-$PGVERSION 	# For restart service" | tee /dev/fd/3
 echo "" | tee /dev/fd/3
 echo "=============================================================================" | tee /dev/fd/3
@@ -159,4 +160,5 @@ echo "==========================================================================
 # End of Process
 echo ""
 echo "$DATE Script Done ..." | tee /dev/fd/3
-echo "" 
+echo "Log file name : install.log" | tee /dev/fd/3
+echo ""
